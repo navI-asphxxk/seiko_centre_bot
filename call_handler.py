@@ -176,8 +176,9 @@ class CheckCall:
 
     def call_check_price(self):
         markup = types.InlineKeyboardMarkup(row_width=1)
-        b1 = types.InlineKeyboardButton("🔙Назад", callback_data="backToPrice")
-        markup.add(b1)
+        b1 = types.InlineKeyboardButton("📅Записаться на обучение", url="https://t.me/yana_seiko_centre")
+        b2 = types.InlineKeyboardButton("🔙Назад", callback_data="backToPrice")
+        markup.add(b1, b2)
 
         if self.data == "onlineCourse":
             bot.edit_message_media(media=telebot.types.InputMedia(type='photo',
@@ -217,8 +218,9 @@ class CheckCall:
 
     def call_online_offline_tariff(self):
         markup = types.InlineKeyboardMarkup(row_width=1)
-        b1 = types.InlineKeyboardButton("🔙Назад", callback_data="backToTariff")
-        markup.add(b1)
+        b1 = types.InlineKeyboardButton("📅Записаться на обучение", url="https://t.me/yana_seiko_centre")
+        b2 = types.InlineKeyboardButton("🔙Назад", callback_data="backToTariff")
+        markup.add(b1, b2)
 
         if self.data == "onlineTariff":
             bot.edit_message_text(text=tariff_online_text, parse_mode='MarkdownV2', reply_markup=markup,

@@ -25,7 +25,7 @@ def main_menu():
 def feedback_menu():
     markup = types.InlineKeyboardMarkup(row_width=1)
     b1 = types.InlineKeyboardButton("📅Записаться на пробное занятие", url="https://t.me/yana_seiko_centre")
-    b2 = types.InlineKeyboardButton("🥇Узнать свой уровень", callback_data="getLevel")
+    b2 = types.InlineKeyboardButton("🥇Уровни японского", callback_data="getLevel")
     b3 = types.InlineKeyboardButton("💬Задать вопрос", url='https://t.me/yana_seiko_centre')
     b4 = types.InlineKeyboardButton("🔙Назад", callback_data="back")
 
@@ -35,7 +35,7 @@ def feedback_menu():
 
 def get_level_and_back_buttons():
     markup = types.InlineKeyboardMarkup(row_width=1)
-    b2 = types.InlineKeyboardButton("🥇Узнать свой уровень", callback_data="getLevel")
+    b2 = types.InlineKeyboardButton("🥇Уровни японского", callback_data="getLevel")
     b4 = types.InlineKeyboardButton("🔙Назад", callback_data="back")
 
     markup.add(b2, b4)
@@ -75,7 +75,7 @@ def price_menu():
 def tariff_menu():
     markup = types.InlineKeyboardMarkup(row_width=1)
     b1 = types.InlineKeyboardButton("Online тарифы", callback_data="onlineTariff")
-    b2 = types.InlineKeyboardButton("Offline тарифы", callback_data="offlineTariff")
+    b2 = types.InlineKeyboardButton("Offline тарифы (для г. Казани)", callback_data="offlineTariff")
     b3 = types.InlineKeyboardButton("🔙Назад", callback_data="back")
 
     markup.add(b1, b2, b3)
